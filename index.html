@@ -12,11 +12,113 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 90vh;
+    }
+    .card {
+      width: 60%;
+      height: 100%;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 0 0 20px 0 hsla(0, 0%, 0%, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+    .card__image {
+      width: 50%;
+      height: 100%;
+      background-image: url(./images/image-product-desktop.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .card__content {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 5px;
+    }
+    .card__title {
+      font-size: 12px;
+    }
+    .card__title__space{
+      color: gray;
+      font-size: 5px;
+      letter-spacing: 2px;
+    }
+    .card__description {
+      font-size: 6px;
+    }
+    .card__price {
+      font-size: 12px;
+      font-weight: bold;
+      color: #3d8168;
+    }
+    .card__price--crossed {
+      text-decoration: line-through;
+      font-size: 6px;
+      text-align: center;
+      padding: 20px;
+      color: gray;
+    }
+    .card__price--button {
+      display: block;
+      width: 100%;
+      background-color: #3d8168;
+      border: none;
+      border-radius: 5px;
+      color: hsl(0, 0%, 100%);
+      cursor: pointer;
+    }
+    .card__button:hover {
+      background-color: hsl(231, 69%, 60%);
+    }
+    .card__text {
+      display: flex;
+      flex-direction: column;
+    }
+    .price{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
   </style>
 </head>
 <body>
-
-  Preview
+  <div class="container">
+    <div class="card">
+      <div class="card__image">
+      </div>
+      <div class="card__content">
+        <div class="card__text">
+          <p class="card__title__space">PERFUME</p>
+          <p class="card__title">Gabrielle<br> Essence Eau<br> De Parfum</p>
+          <p class="card__description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+        </div>
+        <div class="card__price">
+          <div class="price">
+            <span class="card__price--value">$149.99</span><span class="card__price--crossed">$169.99</span>
+          </div>
+          <button class="card__price--button"><img src="images/icon-cart.svg" />Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--   
+  <div class="attribution">
+    Preview
 
   Gabrielle Essence Eau De Parfum
 
@@ -27,10 +129,9 @@
   $169.99
 
   Add to Cart
-  
-  <div class="attribution">
+
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Sifuna Donnex</a>.
+  </div> -->
 </body>
 </html>
