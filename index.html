@@ -21,7 +21,7 @@
     }
     .card {
       width: 60%;
-      height: 100%;
+      height: 90%;
       background-color: white;
       border-radius: 3px;
       box-shadow: 0 0 20px 0 hsla(0, 0%, 0%, 0.1);
@@ -29,6 +29,7 @@
       display: flex;
       flex-direction: row;
       position: relative;
+      font-size: 0px;
     }
     .card__image {
       width: 50%;
@@ -47,7 +48,9 @@
       padding: 5px;
     }
     .card__title {
-      font-size: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 3px;
     }
     .card__title__space{
       color: gray;
@@ -57,8 +60,8 @@
     .card__description {
       font-size: 6px;
     }
-    .card__price {
-      font-size: 12px;
+    .card__price--value {
+      font-size: 10px;
       font-weight: bold;
       color: #3d8168;
     }
@@ -66,30 +69,39 @@
       text-decoration: line-through;
       font-size: 6px;
       text-align: center;
-      padding: 20px;
       color: gray;
+      margin-left: 10px;
     }
     .card__price--button {
-      display: block;
-      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6px;
+      width: 90%;
       background-color: #3d8168;
       border: none;
-      border-radius: 5px;
+      border-radius: 2px;
       color: hsl(0, 0%, 100%);
       cursor: pointer;
+      height: 17px;
     }
-    .card__button:hover {
-      background-color: hsl(231, 69%, 60%);
+    .card__price--button img{
+      width: 6px;
+      height: 6px;
+      margin-right: 5px;
+      
     }
     .card__text {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
     }
     .price{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
+      margin-bottom: 7px;
     }
     
   </style>
@@ -101,8 +113,8 @@
       </div>
       <div class="card__content">
         <div class="card__text">
-          <p class="card__title__space">PERFUME</p>
-          <p class="card__title">Gabrielle<br> Essence Eau<br> De Parfum</p>
+          <span class="card__title__space">PERFUME</span>
+          <span class="card__title">Gabrielle<br> Essence Eau<br> De Parfum</span>
           <p class="card__description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
             Perfumer-Creator for the House of CHANEL.</p>
         </div>
